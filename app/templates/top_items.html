@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Results — Spotify Stats</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<div class="wrapper">
+  <div class="heazer">
+  <div class="title-1"><h1> Top Songs </h1></div>
+  <div class="buttons">
+    <a href="{{ url_for('routes.logout') }}"><button class="btn-hover color-1">Log out</button></a>
+</div>
+</div>
+  <div class="cards-grid">
+    <div class="card">
+      <a href="{{ top_tracks[0].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_tracks[0].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">Listen on Spotify &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_tracks[0].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_tracks[1].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_tracks[1].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">Listen on Spotify &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_tracks[1].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_tracks[2].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_tracks[2].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">Listen on Spotify &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_tracks[2].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_tracks[3].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_tracks[3].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">Listen on Spotify &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_tracks[3].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_tracks[4].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_tracks[4].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">Listen on Spotify &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_tracks[4].image }}" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="title-1"><h1> Top Artists </h1></div>
+  <div class="cards-grid">
+    <div class="card">
+      <a href="{{ top_artists[0].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_artists[0].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">View Profile &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_artists[0].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_artists[1].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_artists[1].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">View Profile &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_artists[1].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_artists[2].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_artists[2].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">View Profile &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_artists[2].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_artists[3].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_artists[3].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">View Profile &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_artists[3].image }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="{{ top_artists[4].url }}" class="card-link" target="_blank">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_artists[4].name }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">View Profile &rsaquo;</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ top_artists[4].image }}" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="title-1"><h1> Top Genres </h1></div>
+  <div class="cards-grid">
+    <div class="card">
+      <a href="#" style="cursor:default;" class="card-link">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_genres[0] }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">#1</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='images/Genre_1.png') }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#" style="cursor:default;" class="card-link">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_genres[1] }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">#2</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='images/Genre_2.png') }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#" style="cursor:default;" class="card-link">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_genres[2] }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">#3</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='images/Genre_3.png') }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#" style="cursor:default;" class="card-link">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_genres[3] }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">#4</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='images/Genre_4.png') }}" />
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="#" style="cursor:default;" class="card-link">
+        <span class="card-overlay">
+          <h3 class="card-title">{{ top_genres[4] }}</h3>
+          <div class="alt-text"><span class="card-mimin-link">#5</span></div>
+        </span>
+        <div class="card-image">
+          <img src="{{ url_for('static', filename='images/Genre_5.png') }}" />
+        </div>
+      </a>
+    </div>
+  </div>
+<div class="footer">
+<p>Coded by <a href="https://mesci.dev/" id="my-link" target="_blank"><strong>Yusuf Mescioğlu</strong></a></p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /*  change this for scaling  */
+  --m: 1.4rem;
+
+  --green-1: #1ED760;
+  --green-2: #2de56f;
+  --green-3: #0dcf52;
+  --green-4: #189f48;
+  --green-5: #4abf73;
+  --green-6: #4abf73;
+  --green-7: #30f576;
+}
+
+body {
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+button {
+  border: calc(0.08 * var(--m)) solid transparent;
+  position: relative;
+  color: #F3F3F3;
+  font-family: "Poppins", sans-serif;
+  font-size: calc(0.7 * var(--m));
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background:linear-gradient(#101011, #101011), linear-gradient(#101011 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--green-7), var(--green-6), var(--green-5), var(--green-4), var(--green-3), var(--green-2), var(--green-1));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+}
+
+button::before {
+  content: '';
+  background: linear-gradient(90deg, var(--green-7), var(--green-6), var(--green-5), var(--green-4), var(--green-3), var(--green-2), var(--green-1));
+  height: 30%;
+  width: 80%;
+  position: absolute;
+  bottom: 10%;
+  z-index: -5;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+  filter: blur(calc(0.8 * var(--m)));
+}
+
+button:hover, button:hover::before {
+  animation: animate 0.5s infinite linear;
+}
+
+.footer, a:visited, a:hover, a:active {
+  color: #343434;
+  bottom: 0px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+#my-link, a:link {
+  text-decoration: none;
+}
+
+.main {
+  color: #fff;
+  opacity: 36%;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 240px;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+  position: absolute;
+  top: 108px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 200%}
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 4rem;
+  }
+  h1 {
+    font-size: 96px;
+    top: 360px;
+  }
+  .main {
+    font-size: 36px;
+    top: 520px;
+    padding: 36px;
+    width: 72%;
+  }
+  button {
+    margin-top: 420px;
+  }
+  .footer {
+    font-size: 40px;
+    text-align: center;
+    padding: 120px;
+    margin-bottom: -40px;
+  }
+}
