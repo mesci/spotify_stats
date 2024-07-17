@@ -20,7 +20,7 @@ Through this application, after logging in with your Spotify account, you can se
 SPOTIPY_CLIENT_ID = os.environ.get('SPOTIPY_CLIENT_ID') or 'write_your_client_id_here'
 SPOTIPY_CLIENT_SECRET = os.environ.get('SPOTIPY_CLIENT_SECRET') or 'write_your_client_secret_here'
 ```
-```write_your_clien_id_here``` — Enter your Client ID here.
+```write_your_client_id_here``` — Enter your Client ID here.
 
 ```write_your_client_secret_here``` — Enter your Client Secret here.
 
